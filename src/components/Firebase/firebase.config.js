@@ -1,6 +1,5 @@
 const firebaseConfig = {
-const firebaseConfig = {
-    // add 
+// add firebaseConfig
 };
 
 

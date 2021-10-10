@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../hooks/useAuth';
+import './Shipping.css'
 
 const Shipping = () => {
 
@@ -10,17 +11,17 @@ const Shipping = () => {
         console.log(data)
     };
     return (
-        <div>
+        <div className="login-form-shipping">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register("name")} />
                 <br />
-                <input defaultValue={user.email} {...register("email", { required: true })} />
+                <input placeholder="Full Name" defaultValue={user.email} {...register("email", { required: true })} />
                 <br />
-                <input defaultValue=''{...register("address",{ required: true })} />
+                <input placeholder="Email" defaultValue=''{...register("address",{ required: true })} />
                 <br />
-                <input defaultValue='' {...register("city",{ required: true })} />
+                <input placeholder="City Name" defaultValue='' {...register("city",{ required: true })} />
                 <br />
-                <input defaultValue='' {...register("phone number",{ required: true })} />
+                <input placeholder="Phone Number" defaultValue='' {...register("phone number",{ required: true })} />
                 <br />
                 {errors.email && <span>This field is required</span>}
                 <br />
